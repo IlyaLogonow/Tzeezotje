@@ -1,0 +1,224 @@
+/*HERO*/
+.hero {
+    position: relative;
+    min-height: 901px;
+    background-color: url('/img/hero-bg.jpg') 0 0/cover no-repeat;
+}
+
+.hero__content {
+    padding-top: 264px;
+
+    h3 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.06em;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        margin-bottom: 24px;
+        text-transform: uppercase;
+    }
+    p {
+        max-width: 1168px;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 88px;
+        margin-bottom: 40px;
+    }
+}
+
+.social-media {
+    position: absolute;
+    top: 562px;
+    right: 15px;
+}
+
+.social-media__list {
+    display: flex;
+}
+
+.social-media__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+
+    box-sizing: border-box;
+    border: 1px solid #FFFFFF;
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    transition: 0.8s;
+}
+.social-media__item:hover,
+.social-media__item:active,
+.social-media__item:focus {
+    border: 1px solid #D3B47F;
+}
+.social-media__item:not(:last-child) {
+    margin-right: 25px
+}
+
+.social-media__item a {
+    font-weight: 600;
+    text-align: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+} 
+
+@media screen and (max-width: 800px) {
+    .social-media {
+        position: absolute;
+        top: 180px;
+        left: 15px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .hero {
+        min-height: 750px;
+        background-color: url('/img/hero-bg.jpg') 0 0/cover no-repeat;
+    }
+    
+    .hero__content {
+        h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 44px;
+            line-height: 68px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .hero__btn {
+        padding: 28px 55px;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 510px) {
+    .hero__content {
+        h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 30px;
+            line-height: 58px;
+            margin-bottom: 25px;
+        }
+    }
+
+    .hero__btn {
+        padding: 18px 45px;
+    }
+}
+
+/*SCHEDULE*/
+.schedule {
+    min-height: 808px;
+}
+
+.schedule__row {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 79px;
+}
+
+.schedule__list {
+    color: var(--schedule-fs);
+}
+
+.schedule__item {
+    display: flex;
+    align-items: center;
+    line-height: 32px;
+    h3 {
+        font-weight: 600;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    p {
+        display: inline;
+        font-size: 18px;
+    }
+    span {
+        width: 5px;
+        height: 5px;
+        background: #D3B47F;
+        border-radius: 50%;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+.schedule__item--border {
+    max-width: 469px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #E7E7E7;
+}
+
+/*schedule-photo*/
+.schedule__photo {
+    display: flex;
+    position: relative;
+}
+.schedule__photo img {
+    width: 323px;
+    height: 486px;
+    z-index: 2;
+}
+.schedule__photo-one {
+    display: block;
+    margin-right: 22px;
+    margin-top: 152px;
+}
+.schedule__photo-two {
+    display: block;
+}
+.schedule__photo-elem {
+    position: absolute;
+    width: 471px;
+    height: 502px;
+    top: 52px;
+    left: 97px;
+    border: 2px solid var(--schedule-elem);
+    z-index: 1;
+}
+@media screen and (max-width: 1170px) {
+    .schedule__row {
+        justify-content: space-around;
+    }
+    .schedule__photo-elem {
+        display: none;
+    }
+    .schedule__photo img {
+        width: 249px;
+        height: 367px;
+    }
+    .schedule__photo-one {
+        margin-right: 22px;
+        margin-top: 152px;
+    }
+}
+@media screen and (max-width: 1020px) {
+    .schedule__row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .schedule__list {
+        margin-bottom: 20px;
+    } 
+}
+@media screen and (max-width: 550px) {
+    .schedule__photo img {
+        display: none;
+    }
+}
+
+/*REVIEWS*/
+.reviews {
+    min-height: 782px;
+    background-color: var(--reviews-bg);
+}

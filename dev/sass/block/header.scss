@@ -1,0 +1,151 @@
+/*HOVER*/
+.main-header {
+    width: 100%;
+    min-height: 55px;
+    position: absolute;
+    top: 55px;
+    z-index: 100;
+}
+
+.main-header__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav__list {
+    display: flex;
+}
+
+.main-nav__item a {
+    display: inline-block;
+    color: var(--hero-fs);
+    cursor: pointer;
+    font-weight: 500;
+}
+.main-nav__item a::after {
+    background-color: var(--east-bay); 
+    display: block;
+    content: "";
+    height: 4px; 
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+.main-nav__item a:hover:after  {
+    width: 100%;
+}
+.main-nav__item:not(:last-child) {
+    margin-right: 45px;
+}
+
+.number {
+    display: flex;
+}
+.number::before {
+    content: url("/img/number.svg");
+    width: 24px;
+    height: 24px;
+    margin-right: 14px;
+}
+
+/*HAMBURGER-MENU*/
+/*скрываем чекбокс*/
+#menu__toggle {
+    opacity: 0;
+    display: none;
+}
+
+@media screen and (max-width: 950px) {
+    .main-header__row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-nav__list {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .main-nav__item:not(:last-child) {
+        margin-right: 0px;
+    }
+
+    /*HAMBURGER-MENU*/
+    /*скрываем чекбокс*/
+    #menu__toggle {
+        opacity: 0;
+        display: block;
+    }
+    /* стилизуем кнопку */
+    .menu__btn {
+        display: flex;
+        align-items: center;  
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    /*добавляем "гамбургер"*/
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: var(--white);
+    }
+    .menu__btn > span::before {
+    content: '';
+        top: -9px;
+    }
+    .menu__btn > span::after {
+    content: '';
+        top: 9px;
+    }
+
+    /* контейнер меню */
+    .menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: -100%;
+        width: 300px;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        background-color: var(--hamburger-menu);
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    }
+    /* элементы меню */
+    .menu__item {
+        display: block;
+        padding: 20px 40px;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        left: 0;
+    } 
+}
