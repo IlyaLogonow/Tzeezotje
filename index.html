@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/reset.min.css">
     <link rel="stylesheet" href="css/main.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
         <div class="container">
             <div class="main-header__row hamburger-menu">
                 <img src="img/logo.svg" alt="">
-                <input id="menu__toggle" type="checkbox" />
+                <input id="menu__toggle" type="checkbox">
                 <label class="menu__btn" for="menu__toggle">
                   <span></span>
                 </label>
@@ -35,14 +35,14 @@
             </div>
         </div>
     </header>
-    <main class="">
+    <main class="content">
         <div class="hero">
             <div class="container">
                 <h1 class="visibility-hidden">Restaurant Tzeezotje</h1>
                 <div class="hero__content">
                     <h3>Open everyday 6am - 9pm</h3>
                     <p>A bad day with lunch is better than a good day without it.</p>
-                    <button class="btn hero__btn">Reserve a table</button>
+                    <button class="btn hero__btn" id="btn">Reserve a table</button>
                 </div>
 
                 <div class="social-media">
@@ -190,7 +190,7 @@
 
                     <div class="questions">
                         <h3 class="сontacts-questions__title questions__title">have any questions?</h3>
-                        <form class="questions__form" action="">
+                        <form class="questions__form" action="#">
                             <div class="questions__form-row">
                                 <div>
                                     <p>Name</p>
@@ -233,6 +233,23 @@
             </div>
         </div>
     </footer>
+    <div class="form-div" id="form-div">
+        <div class="form-wrapper">
+            <form class="form transparent" action="#" id="form">
+                <div class="form-inner">
+                    <h3>Boeken</h3>
+                    <label for="username">uw naam</label>
+                    <input class="form-input _req" type="text" id="username">
+                    <label for="formEmail">Jouw mail</label>
+                    <input class="form-input _email _req" id="formEmail" type="tel" name="tel">
+                    <input type="checkbox" id="custom-checkbox">
+                    <label for="custom-checkbox">Onthoud me</label>
+                    <input type="submit" value="Отправить">
+                </div>
+                <button class="close">dichtbij</button>
+            </form>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
