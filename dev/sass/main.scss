@@ -13,16 +13,24 @@
     --schedule-elem: var(--tan);
     --reviews-bg: var(--east-bay);
     --reviews-title: var(--tan);
-    --reviews-text: var(--white);
-    --menu-title: var(--black);
+    --reviews-name: var(--tan);
+    --about-title: var(--black);
+    --about-text: var(--gray);
+    --about-item: var(--tan);
+    --gallery-bg:var(--east-bay);
     --gallery-title: var(--white);
     --gallery-text: var(--white);
-    --contacts-title: var(--black);
+    --contacts-questions-text: var(--black);
     --contacts-text: var(--mine-shaft);
     --contacts-elem: var(--tan);
     --sending-questions-title: var(--black);
-    --sending-questions-input-text: var(--gray);
+    --contact-item-ingo: var(--mine-shaft);
+    --contacts-item: var(--tan);
+    --questions-form: var(--black);
+    --sending-questions-placeholder: var(--gray);
     --hamburger-menu: var(--tan);
+    --swiper-button-next: var(--tan);
+    --swiper-button-prev: var(--white)
 }
 
 *, *:after, *:before { 
