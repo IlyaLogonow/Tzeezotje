@@ -1,5 +1,5 @@
 # Tzeezotje
-## Сайт-портфолио.
+## Тестовое задание.
 ## Отправка формы без перезагрузки. AJAX. PHPMailer.
 ![EliasPortfolio-Website](https://github.com/IlyaLogonow/Tzeezotje/blob/main/Tzeezotje.png)
 
