@@ -43,27 +43,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function formSend(e) {
         e.preventDefault();
+
         let error = formValidate(form);
-        let formData = formValidate(form);
-        formData.append('image', formImage.files[0]);
+
+        let formData = new FormData(form);
+
         if (error === 0) {
-            form.classList.add('_sending')
-            let respinse = await fetch('sendmail.php', {
+            form.classList.add('_sending');
+            let response = await fetch('sendmail.php', {
                 method: 'POST',
                 body: formData
             });
             if (response.ok) {
                 let result = await response.json();
                 alert(result.message);
-                formPreview.innerHTML = '';
                 form.reset();
                 form.classList.remove('_sending');
             } else {
-                alert('Fout')
+                alert('Fout');
                 form.classList.remove('_sending');
             }
         } else {
-            alert('Verplichte velden invullen')
+            alert('Vul de rood gemarkeerde verplichte velden in')
         }
     }
 
@@ -80,6 +81,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     formAddError(input);
                     error++
                 }
+            } else if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
+                formAddError(input);
+                error++;
             } else {
                 if (input.value === '') {
                     formAddError(input);
@@ -87,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
+        return error;
     }
 
     function formAddError(input) {
@@ -103,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //MODAL//
-var modal = document.getElementById("form-div");
+var modal = document.getElementById("form-wrapper");
 var btn = document.getElementById("btn");
 var span = document.getElementsByClassName("close")[0];
 

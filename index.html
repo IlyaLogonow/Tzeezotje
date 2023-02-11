@@ -233,22 +233,54 @@
             </div>
         </div>
     </footer>
-    <div class="form-div" id="form-div">
-        <div class="form-wrapper">
-            <form class="form transparent" action="#" id="form">
-                <div class="form-inner">
-                    <h3>Boeken</h3>
-                    <label for="username">uw naam</label>
-                    <input class="form-input _req" type="text" id="username">
-                    <label for="formEmail">Jouw mail</label>
-                    <input class="form-input _email _req" id="formEmail" type="tel" name="tel">
-                    <input type="checkbox" id="custom-checkbox">
-                    <label for="custom-checkbox">Onthoud me</label>
-                    <input type="submit" value="Отправить">
+    <div class="form-wrapper" id="form-wrapper">
+        <form class="form__body" action="#" id="form">
+            <h2 class="visibility-hidden">Het indienen van een formulier</h2>
+            <div class="form__item">
+                <label for="formName" class="form__label">Naam:</label>
+                <input id="formName" type="text" name="name" class="form__input _req">
+            </div>
+            <div class="form__item">
+                <label for="formEmail" class="form__label">E-mail:</label>
+                <input id="formEmail" type="text" name="email" class="form__input _req _email">
+            </div>
+            <div class="form__item">
+                <h3 class="form__title">Hoeveel stoelen wilt u reserveren?</h3>
+                <div class="options">
+                    <div class="options__item">
+                        <input id="formOnePlace" type="radio" value="OnePlace" name="place" class="options__input">
+                        <label for="formOnePlace">Een plaats</label>
+                    </div>
+                    <div class="options__item">
+                        <input id="formTweePlace" type="radio" value="TweePlace" name="place" class="options__input">
+                        <label for="formTweePlace">Twee plaats</label>
+                    </div>
+                    <div class="options__item">
+                        <input id="formMorePlace" type="radio" value="MorePlace" name="place" class="options__input">
+                        <label for="formMorePlace">Meer dan twee plaatsen</label>
+                    </div>
                 </div>
-                <button class="close">dichtbij</button>
-            </form>
-        </div>
+            </div>
+            <div class="form__item">
+                <label for="formMassege" class="form__label">Laat jouw reactie achter</label>
+                <textarea name="Massege" id="formMassege" class="form__input"></textarea>
+            </div>
+            <div class="form__item">
+                <h3 class="form__title">Je leeftijd</h3>
+                <select name="age" class="select">
+                    <option value="No 18" selected>Ik ben jonger dan 18</option>
+                    <option value="from 18">Ik ben al 18 jaar oud</option>
+                </select>
+            </div>
+            <div class="form__item">
+                <div class="checkbox">
+                    <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input _req">
+                    <label for="formAgreement" class="form__laber"><span>Ik geef toestemming voor het verwerken van mijn persoonsgegevens conform<a href="#">de voorwaarden</a></span></label>
+                </div>
+            </div>
+            <button value="submit" class="form__button btn">Versturen</button>
+        </form>
+        <button class="close btn" id="close">X</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
