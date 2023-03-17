@@ -11,4 +11,4 @@
 - swiper
 
 ### Демонстрация сайт 
-- https://ilyalogonow.github.io/Tzeezotje/
+- https://ilyalogonow.github.io/Tzeezotje-TestTask/
